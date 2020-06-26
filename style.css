@@ -1,0 +1,247 @@
+h1 {
+    text-align: center;
+    color:green;
+    text-shadow: 4px 4px 5px rgb(165, 224, 165);
+}
+
+.title {
+    color:rgb(236, 75, 75);
+}
+
+#italic{
+    color:blue;
+}
+
+nav {
+    background: violet;
+    text-align: center;
+}
+
+/*when you have a class you always use . in front of it */
+
+.nav-wrapper {
+    background-color:aqua;
+}
+
+a{
+    text-decoration-line: none;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    padding: 30px;
+}
+.container{
+    border: 10px dashed greenyellow;
+    margin: 50px 5px 25px 0px;
+    padding: 30px 0px 10px 35px;
+}
+
+.box{
+    height: 200px;
+    width: 200px;
+    background:aqua;
+    margin: 10px;
+
+}
+/* keyframes are used to animate objects */
+@keyframes fadeMe {
+0% {
+    opacity:1;
+}
+100% {
+    opacity: 0;
+}
+
+}
+
+/* id is # */
+#box1 {
+    animation-name: fadeMe; 
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+/* when you want to do an animation you always have to write: @keyframes and name the animation and then { - you always start an animation at 0% */
+@keyframes rotation {
+    0% {transform:rotate(90deg);}
+    50% {transform:rotate(180deg);}
+    100% {transform:rotate(360deg);}
+}
+
+#box2 {
+    animation-name: rotation; 
+    animation-duration: 2s;
+    animation-iteration-count: 4s;
+    animation-timing-function: ease-in-out;
+    border-radius: 10%;
+    background-image: radial-gradient(circle, purple,orange,yellow,pink,purple);
+
+}
+
+@keyframes getBigger {
+    0% {transform: scale(1);}
+    50% {transform: scale(2);}
+    100% {transform: scale(.5);}
+}
+
+#box3 {
+    animation: getBigger infinite 8s linear;
+    border-radius: 50%;
+    background-color:red;
+
+}
+
+@keyframes ChangeColours {
+    0% {background-color: salmon;}
+    25% {background-color: green;}
+    50% {background-color: yellow;}
+    75% {background-color: black;}
+    100% {background-color: salmon;}
+}
+
+#box4 {
+    animation: ChangeColours 7s 3s forwards; 
+}
+
+@keyframes moveBox {
+    0% {left: 0px; top: 0px;}
+    25% {left: 100px; top: 0px;}
+    50% {left: 100px; top: 200px;}
+    75% {left: 0px; top: 200px;}
+    100% {left: 0px; top: 0px;}
+}
+
+#box5 {
+    position: relative;
+    background-color: red;
+    animation: moveBox 5s 3s;
+    
+}
+
+#box6 {
+    top: 10px;
+    left: 20px;
+    position: relative;
+}
+
+/*change the backgroud - can add image or just colours*/
+html {
+    background-image:linear-gradient(white);
+}
+
+.circle-img {
+    border-radius: 50%;
+}
+
+img { 
+box-shadow: 8px 8px 10px 8px rgb(179, 203, 219);
+}
+
+.flex{
+    margin: 30px;
+    border: 3px solid black;
+    display: flex;
+   flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+   
+}
+
+/* this next section is for the Contact 2 - style it */
+.contact-box {
+    display:flex;
+    justify-content: center;
+
+}
+
+.row {
+    margin:30px;
+}
+
+.input-field {
+    margin: 20px;
+}
+
+/* style the contact form */
+form input{
+    display:block;
+    margin: 30px;
+}
+
+    form button {
+        display: block;
+        margin: 30px;
+    }
+form textarea {
+    display: block;
+    margin: 30px;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5, [col] 20% ) ;
+    grid-template-rows: repeat(3, [row] auto  );
+    background-color:#fff;
+    color: #444;
+}
+
+.Box {
+    background-color:#fff;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+    z-index:10;
+
+}
+
+.a {
+    grid-column: col / span  2;
+    grid-row: row ;
+    display: flex;
+    justify-content: center;
+}
+.b {
+    grid-column: col 3 / span  2 ;
+    grid-row: row ;
+    display: flex;
+    justify-content: center;
+}
+.c {
+    grid-column: col / span 5 ;
+    grid-row: row 2 ;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(pink,yellow,purple,orange);
+}
+.d {
+    grid-column: col  / span 3 ;
+    grid-row: row 3 ;
+    display: flex;
+    justify-content: center;
+}
+
+.e {
+    grid-column: col 3 / span  3;
+    grid-row: row 3;
+    display: flex;
+    justify-content: center;
+}
+
+.f {
+    grid-column: col 2 / span 3;
+    grid-row: row 2  ;
+    background-color: rgba(49,121,207, 0.5);
+    display: flex;
+    justify-content: center;
+    z-index: 20;
+    background-image: linear-gradient(violet,orange,yellow,pink);
+}
